@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Welcome to e-Shop</p>
+    <p id="pro"></p>
+
+    <script>
+        let product = {
+            name: "i-Phone",
+            brand: "apple"
+        };
+
+        Object.defineProperty(product, 'proDet', {
+            get() {
+                return `${this.name} ${this.brand}`;
+            },
+
+            set(value) {
+                [this.name, this.brand] = value.split("");
+            }
+        });
+
+        alert(product.proDet);
+
+        for (let val in product)
+            alert(product[val]);
+        document.getElementById('pro').innerHTML = product.name
+    </script>
+
+</body>
+
+</html>

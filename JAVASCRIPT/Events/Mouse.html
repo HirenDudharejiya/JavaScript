@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <p id="demo">Hello</p>
+        <p id="demo1" onmouseover="mouseover()">Mouse Over</p>
+        <p id="demo1" onmouseout="mouseout()">Mouse OUt</p>
+        <p id="demo1" onmousedown="mousedown()">Mouse Up</p>
+        <p id="demo1" onmouseup="mouseup()">Mouse Down</p>
+        <input type="button" onclick="click1()" value="Submit" />
+        <input type="button" ondblclick="dblclick()" value="Submit" />
+        <input type="button" oncontextmenu="context()" value="Submit" />
+
+
+        <input type="submit" onclick="displayDate()" value="Time">
+
+    </form>
+
+    <script>
+
+        function click1() {
+            let a = document.getElementById('demo')
+            a.innerText = 'Welcome'
+            a.style.color = 'red'
+            console.log(a)
+
+        }
+
+        function dblclick() {
+            let a = document.getElementById('demo')
+            a.innerText = 'Welcome'
+            a.style.color = 'red'
+            console.log(a)
+
+        }
+        function context() {
+            alert("Welcome")
+        }
+
+        function mouseover() {
+            alert("Welcome to e-Shop");
+        }
+        function mouseout() {
+            alert("Product added to cart");
+        }
+        function mouseup() {
+            alert("Product added to cart");
+        }
+        function mousedown() {
+            alert("Product added to cart");
+        }
+
+
+        function displayDate() {
+            const d = new Date()
+            document.getElementById("demo1").innerHTML = d;
+            setTimeout(displayDate, 1000)
+        }
+
+        displayDate()
+
+
+
+
+    </script>
+
+</body>
+
+</html>

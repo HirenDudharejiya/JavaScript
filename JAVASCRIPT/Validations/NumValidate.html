@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="form1" action="../Clock/setTimeOut.html" onsubmit="return numVali()">
+        Number: <input type="text" maxlength="10" name="num"><span id="numloc"></span><br />
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        function numVali() {
+            var num = document.form1.num.value;
+            if (isNaN(num)) {
+                document.getElementById("numloc").innerHTML = "Enter Numeric value only";
+                return false;
+            }
+            else if (num.length != 10) {
+                document.getElementById('numloc').innerHTML = "Enter valid range of number"
+                return false
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

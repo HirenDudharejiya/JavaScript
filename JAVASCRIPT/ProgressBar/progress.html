@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        #progress {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        #proBar {
+            width: 1%;
+            height: 3px;
+            background-color: rgb(240, 102, 102);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="progress">
+        <div id="proBar"></div>
+    </div>
+
+    <br>
+    <button onclick="load()">Click Me</button>
+
+    <script>
+        let i = 0;
+        function load() {
+            if (i == 0) {
+                i = 1;
+                let elem = document.getElementById("proBar");
+                let width = 1;
+                let id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

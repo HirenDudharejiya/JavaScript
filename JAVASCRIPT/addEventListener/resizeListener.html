@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Start Shopping</h2>
+    <button id="btn">Click</button>
+
+    <p id="event"></p>
+    <p id="event1"></p>
+
+    <script>
+
+        window.addEventListener("resize", function () {
+            document.getElementById("event").innerHTML = 'Welcome to e-Shop';
+        });
+
+
+        let a = document.getElementById("btn");
+        a.addEventListener("mouseover", search);
+        a.addEventListener("click", setColor);
+        a.addEventListener("mouseout", backColor);
+        a.addEventListener("mouseout", setSize);
+
+        function search() {
+            document.getElementById("event1").innerHTML += "Search Product";
+        }
+
+        function setColor() {
+            document.getElementById("event1").style.color += 'white'
+        }
+
+        function backColor() {
+            document.getElementById("event1").style.backgroundColor = 'pink';
+        }
+        function setSize() {
+            document.getElementById("event1").style.width = '20%'
+        }
+
+    </script>
+
+</body>
+
+</html>

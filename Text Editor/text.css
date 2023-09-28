@@ -1,0 +1,80 @@
+h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: #ff7a75;
+    font-family: 'Arial', sans-serif;
+}
+
+label {
+    color: #ff7a75;
+    font-family: 'Arial', sans-serif;
+}
+
+section {
+    padding: 5%;
+    padding-top: 0;
+    height: 100vh;
+}
+
+.side {
+    margin-left: 0;
+}
+
+button {
+    margin: 10px;
+    border-color: #f76b6b !important;
+    color: #f76b6b !important;
+    margin-bottom: 25px;
+}
+
+button:hover {
+    background-color: #e9817d !important;
+    color: white !important
+}
+
+input {
+    margin: 10px;
+    border-color: #f76b6b !important;
+    color: #f76b6b !important;
+    margin-bottom: 25px;
+}
+
+input:hover {
+    background-color: #e9817d !important;
+    color: white !important
+}
+
+textarea {
+    padding: 3%;
+    border-color: #ec7e7a;
+    /* border-width: thick; */
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+
+}
+
+.sumContainer {
+    margin-top: 30px;
+}
+
+.sumContent {
+    margin: auto;
+    width: 800px;
+}
+
+@media only screen and (max-width: 768px) {
+    .sumContent {
+        display: block;
+        width: 200px;
+
+    }
+
+    section {
+        width: 350px;
+        display: block;
+    }
+}

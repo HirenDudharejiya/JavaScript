@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p><button onclick="toggle()">Click Me</button></p>
+    <div id="change">Hello</div>
+
+    <script>
+        function toggle() {
+            var x = document.getElementById("change");
+            // if (x.innerHTML === "Hello") {
+            //     x.innerHTML = "Java!";
+            // } 
+            // else {
+            //     x.innerHTML = "Hello";
+            // }
+            (x.innerHTML === "Hello") ? x.innerHTML = "Java!" : x.innerHTML = "Hello";
+        }
+    </script>
+
+</body>
+
+</html>

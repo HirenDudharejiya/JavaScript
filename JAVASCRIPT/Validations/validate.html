@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    function validation() {
+
+      // e.preventDefault()
+      name = document.getElementById('id1').value
+      pass = document.getElementById('id1').value
+      cpass = document.getElementById('id2').value
+      phn = document.getElementById('phn').value
+
+
+
+      if (name == "") {
+        alert("pls enter your name")
+        return false
+      }
+
+      if (name.length < 3 || name.length > 15) {
+        alert("invalid name")
+        return false
+      }
+      if (!isNaN(name)) {
+        alert("numbers not allow")
+        return false
+      }
+
+      if (pass != cpass) {
+        // 
+        alert("password not match")
+        return false
+      }
+      // else {
+      //   
+      //   return false
+      // }
+
+      if (phn.length != 10) {
+        alert("invalid phone number")
+        return false
+      }
+      if (isNaN(phn)) {
+        alert("char not allow ")
+        return false
+      }
+      return true
+
+    }
+    const disp = (e) => {
+      e.preventDefault()
+      let a = document.getElementById('id1').value
+      document.getElementById('demo').innerHTML = a
+    }
+  </script>
+
+  <form onsubmit="return validation()">
+    name:<input type="text" id="id1" /> <br /><br />
+    pass:<input type="password" id="id1" /> <br /><br />
+    cpass:<input type="password" id="id2" /> <br /><br />
+
+    phone:<input type="text" id="phn" />
+    <input type="submit" onclick="disp()" />
+    <p id="demo"></p>
+
+  </form>
+
+</body>
+
+</html>

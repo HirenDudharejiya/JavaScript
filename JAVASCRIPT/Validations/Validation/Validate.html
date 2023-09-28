@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="validate.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form name="custom_form" id="customForm" onsubmit="return FormValidation()" action="../../Clock/cake.jpg">
+            <div class="form_box">
+                <h1>Registration Form</h1>
+                <div class="input-row">
+                    <input type="text" name="name" placeholder="Name*">
+                    <span class="error">Please Enter Your Name</span>
+                </div>
+                <div class="input-row">
+                    <input type="text" name="email" placeholder="Email*">
+                    <span class="error">Please Enter Your Email</span>
+                </div>
+                <div class="input-row">
+                    <input type="text" name="phone" placeholder="Phone*">
+                    <span class="error">Please Enter Your Phone</span>
+                </div>
+                <div class="input-row">
+                    <select name="subject">
+                        <option value="">Subject*</option>
+                        <option value="Design">Web Designer</option>
+                        <option value="Develpment">Frontend Developer</option>
+                        <option value="Marketing">Backend Developer</option>
+                    </select>
+                    <span class="error">Please Enter Your Subject</span>
+                </div>
+                <div class="input-row">
+                    <input placeholder="Message*" name="message">
+                    <span class="error">Please Enter Your Message</span>
+                </div>
+                <input type="submit" value="Submit" name="">
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="vali.js"></script>
+
+
+</body>
+
+</html>

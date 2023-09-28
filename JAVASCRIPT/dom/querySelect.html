@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="color: green;">PRODUCT OF THE MONTH</h1>
+
+    <div id="prod">
+
+        <span class="data">SMART WATCH</span>
+        <br>
+        <br>
+        <span class="data1">80,000</span>
+
+    </div>
+    <br>
+    <button onclick="product()">ADD TO CART</button>
+    <button onclick="productALL()">ADD TO CART</button>
+
+
+    <script>
+        function product() {
+            var x = document.getElementById("prod");
+            x.querySelector("span").style.backgroundColor = "pink";
+            x.querySelector("span").style.color = "white";
+        }
+        function productALL() {
+            var x = document.getElementById("prod").querySelectorAll("span")
+            let i
+
+            for (i in x) {
+                x[i].style.backgroundColor = "pink";
+                x[i].style.color = "white";
+            }
+
+
+        }
+    </script>
+
+
+</body>
+
+
+</html>

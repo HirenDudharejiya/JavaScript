@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="classlist.css">
+
+</head>
+
+<body>
+
+
+    <button onclick="card()">Add Product</button>
+    <button onclick="discard()">Remove Product</button>
+
+    <div id="myDIV">
+        <p>Smart Phone</p>
+    </div>
+
+    <script>
+
+        function card() {
+            const list = document.getElementById("myDIV");
+            list.classList.add("myStyl");
+
+        }
+        function discard() {
+            document.getElementById("myDIV").classList.remove("myStyl");
+        }
+    </script>
+
+</body>
+
+</html>

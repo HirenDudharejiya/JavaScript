@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Name: <input type="text" id="fname" onblur="upper()"><br><br>
+    Name: <input type="text" id="name" onchange="upperChange()"><br><br>
+    Name: <input type="text" id="name" onfocus="focus1(this)"><br><br>
+    Some text: <input type="text" value="Hello world!" onselect="select1()">
+
+    <p id="demo"></p>
+
+    <form>
+        Select Products:-
+        <select id="pro" onchange="product()">
+            <option value="SMART TV">SMART TV</option>
+            <option value="SMART WATCH">SMART WATCH</option>
+            <option value="i-PHONE">i-PHONE</option>
+        </select>
+    </form>
+
+    <script>
+        function upper() {
+            let x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+        function upperChange() {
+            const x = document.getElementById("name");
+            x.value = x.value.toLowerCase();
+        }
+        function focus1(x) {
+            x.style.background = "pink";
+        }
+        function select1() {
+            document.getElementById("demo").innerHTML = 'hello';
+        }
+        function product() {
+            ele = document.forms[0].pro.value;
+
+            alert(`Product Added to Cart ${ele}`);
+        }
+    </script>
+</body>
+
+</html>

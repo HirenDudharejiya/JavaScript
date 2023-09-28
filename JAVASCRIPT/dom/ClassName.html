@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h2>JavaScript HTML DOM</h2>
+
+    <p>Finding HTML Elements by Class Name.</p>
+    <p class="intro">Hello World!</p>
+    <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p> -->
+
+
+    <h1>Welcome To e-Shop</h1>
+    <h2>Product of the month</h2>
+    <p class="prod">SMART WATCH</p>
+    <h2>APPLE</h2>
+    <p class="prod">80,000</p>
+    <h2>ADD TO CART</h2>
+
+
+
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+
+    <script>
+        const x = document.getElementsByClassName("prod");
+
+        document.getElementById("demo").innerHTML = x[0].innerHTML;
+        document.getElementById("demo1").innerHTML = x[1].innerHTML;
+
+
+    </script>
+
+</body>
+
+</html>

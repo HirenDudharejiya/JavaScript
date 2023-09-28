@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <!-- <button type="button" onclick="fil()">Click</button> -->
+    <button type="button" onclick="prodGet()">Click</button>
+</body>
+<script>
+
+
+
+    // const fil = () => {
+    //     let arr = [10, 23, 30, 40, 50]
+    //     let n = arr.filter((val) => {
+    //         return val % 5 == 0
+    //     })
+    //     document.write(n)
+    // }
+
+
+
+    let products = [{
+        id: 1,
+        name: 'Smart Watch',
+        brand: 'apple',
+
+    },
+    {
+        id: 2,
+        name: 'Smart Watch',
+        brand: 'Samsung',
+    },
+    {
+        id: 3,
+        name: 'Smart Watch',
+        brand: 'Sony',
+    }
+    ]
+
+    const prodGet = () => {
+        document.getElementById("demo").innerHTML = JSON.stringify(products)
+    }
+
+    const fil = () => {
+
+        let n = products.filter((val) => {
+            return val.id
+        })
+        document.write(n)
+    }
+
+
+
+
+</script>
+
+</html>

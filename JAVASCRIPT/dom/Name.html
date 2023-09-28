@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Give Feedback</p>
+    <p>
+        <label for="ok">
+            <input type="radio" name="rate" value="OK" id="ok"> OK
+        </label>
+        <label for="good">
+            <input type="radio" name="rate" value="Good"> Good
+        </label>
+        <label for="very-good">
+            <input type="radio" name="rate" value="Very Good" id="very-good"> Very Good
+        </label>
+    </p>
+    <p>
+        <button id="btnRate" onclick="rateP()">Submit</button>
+    </p>
+    <p id="output"></p>
+
+
+    <script>
+        // let btn = document.getElementById('btnRate');
+        // let output = document.getElementById('output');
+
+        // btn.addEventListener('click', () => {
+        //     let rates = document.getElementsByName('rate');
+        //     rates.forEach((rate) => {
+        //         if (rate.checked) {
+        //             output.innerText = `You selected: ${rate.value}`;
+        //         }
+        //     });
+
+        // });
+
+        const rateP = () => {
+            // let btn = document.getElementById('btnRate');
+            let output = document.getElementById('output');
+
+            let rates = document.getElementsByName('rate');
+            rates.forEach((rate) => {
+                if (rate.checked) {
+                    output.innerText = `You selected: ${rate.value}`;
+                }
+
+            })
+        }
+
+    </script>
+</body>
+
+</html>

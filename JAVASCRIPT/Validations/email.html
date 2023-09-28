@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform" action="../Clock/cake.jpg" onsubmit=" return emailVal()">
+        Email: <input type="email" name="email"><br />
+
+        <input type="submit" value="validate">
+    </form>
+
+    <script>
+        function emailVal() {
+            let a = document.myform.email.value;
+            let atposition = a.indexOf("@");
+            let dotposition = a.lastIndexOf(".");
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= a.length) {
+                alert("Please enter a valid e-mail address \n atpostion:" + atposition + "\n dotposition:" + dotposition);
+                return false;
+            }
+        }  
+    </script>
+
+</body>
+
+</html>

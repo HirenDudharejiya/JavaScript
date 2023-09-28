@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: black;
+        }
+
+        .clock {
+            color: rgb(235, 110, 110);
+            font-size: 60px;
+            letter-spacing: 7px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 150px;
+            width: 100%;
+            /* border: 2px solid black; */
+        }
+
+
+
+        .cake {
+            text-align: center;
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .clock {
+                font-size: 20px;
+                /* margin: 0; */
+            }
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <p>Wait 5 seconds for the greeting:</p>
+        <h2 id="demo"></h2>
+        <div class="cake" id="cak"><img src="cake.jpg" height="150px" width="200px"></div>
+        <div id="dispClock" class="clock" onload="showTime()"></div>
+    </div>
+
+    <script>
+        function showTime() {
+
+            let date = new Date();
+            const time = date.toLocaleTimeString();
+            document.getElementById("dispClock").innerText = time;
+            setTimeout(showTime, 1000);
+
+        }
+
+        showTime();
+
+    </script>
+    <script>
+        const myTimeout = setTimeout(myGreeting, 5000);
+
+        function myGreeting() {
+            document.getElementById("demo").innerHTML = "Happy Birthday!"
+            document.getElementById("cak").style.display = "block"
+            document.getElementById("demo").style.color = "white"
+            document.getElementById("demo").style.textAlign = "center"
+
+        }
+    </script>
+</body>
+
+</html>
